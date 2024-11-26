@@ -3,7 +3,7 @@ package PART4;
 public class Gauge {
     private int value;
 
-    Gauge() {
+    public Gauge() {
         this.value = 0;
     }
 

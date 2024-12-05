@@ -1,12 +1,16 @@
 package PART4;
 
 public class TelevisionProgram {
-    protected String name;
-    protected int duration;
+    private String name;
+    private int duration;
 
     public TelevisionProgram(String name, int duration) {
         this.name = name;
         this.duration = duration;
+    }
+
+    public int getDuration() {
+        return this.duration;
     }
 
     public String toString() {

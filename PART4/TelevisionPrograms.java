@@ -27,7 +27,8 @@ public class TelevisionPrograms {
 
         for (int i = 0; i < televisionPrograms.size(); i++) {
             TelevisionProgram program = televisionPrograms.get(i);
-            if (program.duration <= maxDuration) {
+            int duration = program.getDuration();
+            if (duration <= maxDuration) {
                 System.out.println(program);
             }
         }

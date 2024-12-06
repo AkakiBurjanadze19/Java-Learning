@@ -10,19 +10,19 @@ public class Timer {
     }
 
     public void advance() {
-        hundredths++;
-        if (hundredths > 99) {
-            hundredths = 0;
-            seconds++;
-            if (seconds > 59) {
-                seconds = 0;
+        this.hundredths++;
+        if (this.hundredths > 99) {
+            this.hundredths = 0;
+            this.seconds++;
+            if (this.seconds > 59) {
+                this.seconds = 0;
             }
         }
     }
 
     public String toString() {
-        String secondsStr = seconds < 10 ? "0" + seconds : "" + seconds;
-        String hundredthsStr = hundredths < 10 ? "0" + hundredths : "" + hundredths;
+        String secondsStr = this.seconds < 10 ? "0" + this.seconds : "" + this.seconds;
+        String hundredthsStr = this.hundredths < 10 ? "0" + this.hundredths : "" + this.hundredths;
         return secondsStr + ":" + hundredthsStr;
     }
 }

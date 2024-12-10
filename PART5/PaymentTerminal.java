@@ -17,9 +17,9 @@ public class PaymentTerminal {
 
     public double eatAffordably(double payment) {
         double mealPrice = 2.50;
-        this.money = this.money + mealPrice;
-        this.affordableMeals++;
         if (payment >= mealPrice) {
+            this.money = this.money + mealPrice;
+            this.affordableMeals++;
             return payment - mealPrice;
         }
         return payment;
@@ -27,9 +27,9 @@ public class PaymentTerminal {
 
     public double eatHeartily(double payment) {
         double mealPrice = 4.30;
-        this.money = this.money + mealPrice;
-        this.heartyMeals++;
         if (payment >= mealPrice) {
+            this.money = this.money + mealPrice;
+            this.heartyMeals++;
             return payment - mealPrice;
         }
         return payment;
@@ -37,12 +37,22 @@ public class PaymentTerminal {
 
     public boolean eatAffordably(PaymentCard card) {
         double mealPrice = 2.50;
-        return card.takeMoney(mealPrice);
+        if (card.takeMoney(mealPrice)) {
+            this.affordableMeals++;
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public boolean eatHeartily(PaymentCard card) {
         double mealPrice = 4.30;
-        return card.takeMoney(mealPrice);
+        if (card.takeMoney(mealPrice)) {
+            this.heartyMeals++;
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public String toString() {

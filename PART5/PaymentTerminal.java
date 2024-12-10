@@ -55,6 +55,11 @@ public class PaymentTerminal {
         }
     }
 
+    public void addMoneyToCard(PaymentCard card, double sum) {
+        this.money += sum;
+        card.addMoney(sum);
+    }
+
     public String toString() {
         return "money: " + this.money + ", number of sold afforable meals: " + this.affordableMeals + ", number of sold hearty meals: " + this.heartyMeals;
     }

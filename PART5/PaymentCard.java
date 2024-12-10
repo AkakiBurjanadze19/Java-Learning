@@ -12,7 +12,9 @@ public class PaymentCard {
     }
 
     public void addMoney(double increase) {
-        this.balance = this.balance + increase;
+        if (increase >= 0) {
+            this.balance = this.balance + increase;
+        }
     }
 
     public boolean takeMoney(double amount) {

@@ -12,6 +12,10 @@ public class HealthStation {
         return person.getWeight();
     }
 
+    public int weighings() {
+        return this.weighings;
+    }
+
     public void feed(Person person) {
         int weight = person.getWeight();
         weight++;

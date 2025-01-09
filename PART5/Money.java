@@ -21,6 +21,10 @@ public class Money {
         return new Money(this.euros + addition.euros, this.cents + addition.cents);
     }
 
+    public boolean lessThan(Money compared) {
+        return this.euros < compared.euros;
+    }
+
     public String toString() {
         String zero = "";
         if (this.cents < 10) {

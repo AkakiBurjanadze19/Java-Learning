@@ -21,6 +21,13 @@ public class Money {
         return new Money(this.euros + addition.euros, this.cents + addition.cents);
     }
 
+    public Money minus(Money decrease) {
+        int newEuros = Math.max(this.euros - decrease.euros, 0);
+        int newCents = Math.max(this.cents - decrease.cents, 0);
+
+        return new Money(newEuros, newCents);
+    }
+
     public boolean lessThan(Money compared) {
         return this.euros < compared.euros;
     }

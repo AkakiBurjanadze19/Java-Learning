@@ -16,5 +16,11 @@ public class MoneyUsage {
         System.out.println(a);
         System.out.println(b);
         System.out.println(c);
+
+        a = new Money(20, 0);
+        b = new Money(30, 0);
+
+        System.out.println(a.lessThan(b));
+        System.out.println(b.lessThan(a));
     }
 }

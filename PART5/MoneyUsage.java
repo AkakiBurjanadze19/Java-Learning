@@ -22,5 +22,10 @@ public class MoneyUsage {
 
         System.out.println(a.lessThan(b));
         System.out.println(b.lessThan(a));
+
+        b = b.minus(a);
+        System.out.println(b);
+        b = b.minus(a);
+        System.out.println(b);
     }
 }

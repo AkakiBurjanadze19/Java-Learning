@@ -2,15 +2,24 @@ package PART6;
 
 public class SimpleCollectionUsage {
     public static void main(String[] args) {
-        SimpleCollection s = new SimpleCollection("alphabet");
+//        SimpleCollection s = new SimpleCollection("alphabet");
+//
+//        s.add("a");
+//        System.out.println(s);
+//
+//        s.add("b");
+//        System.out.println(s);
+//
+//        s.add("c");
+//        System.out.println(s);
 
-        s.add("a");
-        System.out.println(s);
+        SimpleCollection j = new SimpleCollection("characters");
+        System.out.println("Longest: " + j.longest());
 
-        s.add("b");
-        System.out.println(s);
+        j.add("magneto");
+        j.add("mystique");
+        j.add("phoenix");
 
-        s.add("c");
-        System.out.println(s);
+        System.out.println("Longest: " + j.longest());
     }
 }

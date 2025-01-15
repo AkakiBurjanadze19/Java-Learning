@@ -15,6 +15,22 @@ public class SimpleCollection {
         this.collection.add(item);
     }
 
+    public String longest() {
+        if (this.collection.isEmpty()) {
+            return null;
+        }
+
+        String longestStr = this.collection.get(0);
+
+        for (String str : this.collection) {
+            if (str.length() > longestStr.length()) {
+                longestStr = str;
+            }
+        }
+
+        return longestStr;
+    }
+
     public String toString() {
         String printOutput = "";
 

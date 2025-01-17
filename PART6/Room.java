@@ -20,4 +20,31 @@ public class Room {
     public ArrayList<Person> getPersons() {
         return this.persons;
     }
+
+    public Person shortest() {
+        if (this.isEmpty()) {
+            return null;
+        }
+
+        Person shortestPerson = this.persons.get(0);
+        for (Person person : this.persons) {
+            if (person.getHeight() < shortestPerson.getHeight()) {
+                shortestPerson = person;
+            }
+        }
+
+        return shortestPerson;
+    }
+
+    public Person take() {
+        if (this.isEmpty()) {
+            return null;
+        }
+
+        Person shortestPerson = this.shortest();
+
+        this.persons.remove(shortestPerson);
+
+        return shortestPerson;
+    }
 }

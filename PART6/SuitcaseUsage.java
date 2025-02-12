@@ -12,8 +12,6 @@ public class SuitcaseUsage {
         suitcase.addItem(phone);
         suitcase.addItem(brick);
 
-        System.out.println("The suitcase contains the following items: ");
-        suitcase.printItems();
-        System.out.println("Total weight: " + suitcase.totalWeight() + " kg");
+        System.out.println("Heaviest item: " + suitcase.heavisetItem());
     }
 }

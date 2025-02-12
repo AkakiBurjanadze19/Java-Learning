@@ -13,12 +13,34 @@ public class Suitcase {
     }
 
     public void addItem(Item item) {
-        if (this.calculateTotalWeight() + item.getWeight() < this.maxWeight) {
+        if (this.totalWeight() + item.getWeight() < this.maxWeight) {
             this.items.add(item);
         }
     }
 
-    private int calculateTotalWeight() {
+    public void printItems() {
+        for (Item item : this.items) {
+            System.out.println(item.getName() + " (" + item.getWeight() + " kg)");
+        }
+    }
+
+    public Item heavisetItem() {
+        if (this.items.isEmpty()) {
+            return null;
+        }
+
+        Item heaviset = this.items.get(0);
+
+        for (Item item : this.items) {
+            if (item.getWeight() > heaviset.getWeight()) {
+                heaviset = item;
+            }
+        }
+
+        return heaviset;
+    }
+
+    public int totalWeight() {
         int totalWeight = 0;
 
         for (Item item : this.items) {
@@ -30,7 +52,7 @@ public class Suitcase {
 
     public String toString() {
         String output = "";
-        String weightString = " (" + this.calculateTotalWeight() + " kg)";
+        String weightString = " (" + this.totalWeight() + " kg)";
 
         int itemsSize = this.items.size();
 

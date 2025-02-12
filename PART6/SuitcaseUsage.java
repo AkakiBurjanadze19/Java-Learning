@@ -6,16 +6,14 @@ public class SuitcaseUsage {
         Item phone = new Item("Iphone 14 pro max", 1);
         Item brick = new Item("Brick", 4);
 
-        Suitcase suitcase = new Suitcase(5);
-        System.out.println(suitcase);
+        Suitcase suitcase = new Suitcase(10);
 
         suitcase.addItem(book);
-        System.out.println(suitcase);
-
         suitcase.addItem(phone);
-        System.out.println(suitcase);
-
         suitcase.addItem(brick);
-        System.out.println(suitcase);
+
+        System.out.println("The suitcase contains the following items: ");
+        suitcase.printItems();
+        System.out.println("Total weight: " + suitcase.totalWeight() + " kg");
     }
 }
